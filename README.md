@@ -20,14 +20,18 @@ Manage Hooks, Agents, Skills, Rules, and Settings through an intuitive interface
 
 ### memory-bank Plugin (Required)
 
-The **memory-bank plugin** must be installed to retrieve the project list.
+The **[memory-bank](https://github.com/jung-wan-kim/memory-bank)** plugin must be installed to retrieve the project list.
 Config Editor reads project metadata from memory-bank's SQLite DB (`~/.config/superpowers/conversation-index/db.sqlite`).
 
 Without memory-bank, the project list cannot be loaded when switching to Project scope.
 
 ```bash
-# Install memory-bank plugin
-claude plugin add memory-bank
+# Install memory-bank plugin in Claude Code
+/plugin marketplace add https://github.com/jung-wan-kim/memory-bank
+/plugin install memory-bank
+
+# Sync conversations (run at least once)
+memory-bank sync
 ```
 
 ### Other Requirements
@@ -42,7 +46,8 @@ claude plugin add memory-bank
 
 ```bash
 # Install plugin
-claude plugin add claude-config-editor
+/plugin marketplace add https://github.com/jung-wan-kim/claude-config-editor
+/plugin install claude-config-editor
 
 # Run (in a Claude Code session)
 /config-editor
@@ -52,20 +57,17 @@ claude plugin add claude-config-editor
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/claude-config-editor.git
+git clone https://github.com/jung-wan-kim/claude-config-editor.git
 cd claude-config-editor
 
 # Install dependencies
 npm install
 
-# Start backend server (Terminal 1)
-npm run server
-
-# Start frontend dev server (Terminal 2)
-npm run dev
+# Start (frontend + backend together)
+npm start
 ```
 
-Both frontend and backend must run **simultaneously**.
+This runs both the Vite dev server and the backend API server concurrently.
 - Frontend: `http://localhost:5173`
 - Backend API: `http://localhost:3850`
 
@@ -80,8 +82,9 @@ Both frontend and backend must run **simultaneously**.
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Vite dev server |
-| `npm run server` | Backend server (port 3850) |
+| `npm start` | Start frontend + backend together |
+| `npm run dev` | Vite dev server only |
+| `npm run server` | Backend server only (port 3850) |
 | `npm run build` | Production build |
 | `npm run lint` | ESLint check |
 | `npm run typecheck` | TypeScript type check |
