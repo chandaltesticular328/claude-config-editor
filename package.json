@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "node --loader ts-node/esm src/api/fs-server.ts",
+    "server": "tsx src/api/fs-server.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
     "react-grab": "^0.1.28",
+    "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.56.1",
     "vite": "^8.0.0"
