@@ -1,12 +1,18 @@
 {
-  "name": "claude-config-editor-marketplace",
+  "name": "claude-config-editor",
+  "description": "Visual Config Editor for Claude Code",
+  "owner": {
+    "name": "Jung-Wan Kim"
+  },
   "plugins": [
     {
       "name": "claude-config-editor",
-      "source": ".",
+      "source": "./",
       "description": "Visual Config Editor for Claude Code - Drag & Drop Hook Pipeline, Agent Workflow, Skill/Rule Editor",
       "version": "1.0.0",
-      "keywords": ["config", "editor", "hooks", "agents", "skills", "settings", "gui"],
+      "author": {
+        "name": "Jung-Wan Kim"
+      },
       "category": "productivity"
     }
   ]
