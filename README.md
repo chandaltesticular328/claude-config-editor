@@ -3,7 +3,7 @@
 A visual web GUI tool for editing Claude Code configuration files (`~/.claude/`).
 Manage Hooks, Agents, Skills, Rules, and Settings through an intuitive interface.
 
-[한국어](./README-kr.md)
+[한국어](./README-KR.md)
 
 ![Claude Config Editor Demo](./config-editor.gif)
 
